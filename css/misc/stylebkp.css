@@ -1,0 +1,343 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --green:#009944;
+    --red:#E53935;
+    --yellow:#F7B733;
+    --blue:#2C6E91;
+}
+
+body{
+    font-family:'Nunito',sans-serif;
+    color:#333;
+    line-height:1.6;
+}
+
+h1,h2,h3,h4{
+    font-family:'Fredoka',sans-serif;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+section{
+    padding:80px 20px;
+}
+
+/* Announcement */
+
+.announcement{
+    background:#FFF200;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:18px 0;
+    border-top:3px solid var(--red);
+    border-bottom:3px solid var(--red);
+}
+
+.announcement-track{
+    display:flex;
+    width:max-content;
+    animation:ticker 25s linear infinite;
+    font-weight:700;
+    font-size:20px;
+}
+
+.announcement-track span{
+    padding-right:80px;
+}
+
+@keyframes ticker{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* Header */
+
+header{
+
+    background:#EAF8EE;
+
+    text-align:center;
+
+    padding:10px 15px;
+
+}
+
+.logo img{
+    height:120px;
+    width:auto;
+}
+
+/* Navigation */
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-top:10px;
+
+}
+
+.nav-btn{
+
+    padding:10px 18px;
+
+    font-size:15px;
+
+    border-radius:25px;
+
+}
+
+.home-btn{
+    background:var(--green);
+}
+
+.about-btn{
+    background:var(--red);
+}
+
+.program-btn{
+    background:var(--yellow);
+    color:#333;
+}
+
+.contact-btn{
+    background:var(--blue);
+}
+.tour-btn{
+    background:#FF6B35;
+    color:white;
+}
+/* Banner */
+
+.hero{
+    padding:10px 20px 20px 20px;
+}
+
+.banner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.banner img{
+    width:100%;
+    max-width:1000px;
+
+    height:auto;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    display:block;
+}
+
+.banner img{
+
+    width:80%;
+
+    max-width:800px;
+
+    max-height:200px;
+
+    object-fit:cover;
+
+    border-radius:50px;
+
+}
+
+/* Welcome */
+
+.welcome{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.welcome h1{
+    font-size:54px;
+    color:var(--blue);
+    margin-bottom:20px;
+}
+
+.welcome p{
+    max-width:900px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:22px;
+}
+
+/* Buttons */
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--red);
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    margin:5px;
+    font-weight:700;
+}
+
+.btn-secondary{
+    background:var(--green);
+}
+
+/* Titles */
+
+.section-title{
+    text-align:center;
+    color:var(--blue);
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+/* Programs */
+
+#programs{
+    background:#FFF9E6;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.program-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+}
+
+.program-card h3{
+    color:var(--red);
+    margin-bottom:10px;
+}
+
+/* Safety */
+
+.safety{
+    background:var(--green);
+    color:white;
+    text-align:center;
+}
+
+.safety .section-title{
+    color:#FFE066;
+}
+
+.safety-list{
+    list-style:none;
+}
+
+.safety-list li{
+    margin:12px 0;
+}
+
+/* Features */
+
+.features{
+    background:#EAF8EE;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.feature-card h3{
+    color:var(--blue);
+}
+
+/* Testimonials */
+
+.testimonials{
+    background:white;
+}
+
+.testimonial{
+    background:#F8F8F8;
+    padding:25px;
+    margin:20px auto;
+    max-width:800px;
+    border-left:5px solid var(--yellow);
+}
+
+/* Contact */
+
+#contact{
+    text-align:center;
+    background:#EAF8EE;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .welcome h1{
+        font-size:36px;
+    }
+
+    .welcome p{
+        font-size:18px;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .nav-btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .logo img{
+    height:80px;
+    width:auto;
+}
+}
+.cta-strip{
+    background:#E53935;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}

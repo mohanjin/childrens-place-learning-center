@@ -1,0 +1,298 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schedule a Tour | Children's Place Learning Center</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Announcement Banner -->
+    <div class="announcement">
+        <div class="announcement-track">
+            <span>🎉 Now Enrolling Toddlers, Pre-K & School Age Programs • </span>
+            <span>📞 Call (602) 368-8000 to Schedule a Tour • </span>
+            <span>⭐ Safe • Nurturing • Educational Environment • </span>
+            <span>🎉 Limited Openings Available • </span>
+
+            <span>🎉 Now Enrolling Toddlers, Pre-K & School Age Programs • </span>
+            <span>📞 Call (602) 368-8000 to Schedule a Tour • </span>
+            <span>⭐ Safe • Nurturing • Educational Environment • </span>
+            <span>🎉 Limited Openings Available • </span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Children's Place Learning Center">
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-btn home-btn">Home</a>
+            <a href="about.html" class="nav-btn about-btn">About Us</a>
+            <a href="program.html" class="nav-btn program-btn">Programs</a>
+            <a href="contact.html" class="nav-btn contact-btn">Contact</a>
+            <a href="tour.html" class="nav-btn tour-btn">Schedule Tour</a>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+
+        <div class="container">
+
+            <h1>Schedule a Tour</h1>
+
+            <p>
+                We'd love to meet your family and show you our classrooms,
+                programs, and learning environment.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Form Section -->
+    <section class="tour-form-section">
+
+        <div class="container">
+
+            <div class="tour-form-card">
+
+                <h2 class="section-title">
+                    Request a Tour
+                </h2>
+
+                <!-- <form>
+
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" name="parent_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Child's Name *</label>
+                        <input type="text" name="child_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Best Time To Contact You</label>
+
+                        <select name="contact_time">
+
+                            <option>Morning (8am - 12pm)</option>
+
+                            <option>Afternoon (12pm - 4pm)</option>
+
+                            <option>Evening (4pm - 6pm)</option>
+
+                            <option>Any Time</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Comments</label>
+                        <textarea rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Submit Request
+                    </button>
+
+                </form> -->
+
+<form id="tourForm">
+
+    <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" id="parentName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Child's Name *</label>
+        <input type="text" id="childName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" id="phone" required>
+    </div>
+
+    <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+        <label>Best Time To Contact You</label>
+
+        <select id="contactTime">
+            <option>Morning (8am - 12pm)</option>
+            <option>Afternoon (12pm - 4pm)</option>
+            <option>Evening (4pm - 6pm)</option>
+            <option>Any Time</option>
+        </select>
+
+    </div>
+
+    <button type="button" class="btn" onclick="sendTourRequest()">
+        Schedule My Tour
+    </button>
+
+</form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Children's Place Learning Center.
+            All Rights Reserved.
+        </p>
+    </footer>
+<script>
+
+// function sendTourRequest(){
+
+//     const parentName =
+//         document.getElementById("parentName").value;
+
+//     const childName =
+//         document.getElementById("childName").value;
+
+//     const phone =
+//         document.getElementById("phone").value;
+
+//     const email =
+//         document.getElementById("email").value;
+
+//     const contactTime =
+//         document.getElementById("contactTime").value;
+
+//     const subject =
+//         "Tour Request - Children's Place Learning Center";
+
+//     const body =
+// `Parent Name: ${parentName}
+
+// Child Name: ${childName}
+
+// Phone Number: ${phone}
+
+// Email Address: ${email}
+
+// Best Time To Contact: ${contactTime}`;
+
+//     window.location.href =
+//         `mailto:cpl@cpl.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+// }
+
+
+function sendTourRequest(){
+
+    const parentName =
+        document.getElementById("parentName").value.trim();
+
+    const childName =
+        document.getElementById("childName").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const contactTime =
+        document.getElementById("contactTime").value;
+
+    const emailRegex =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const phoneRegex =
+        /^(\+1\s?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+
+    if(!parentName){
+        alert("Please enter your name.");
+        return;
+    }
+
+    if(!childName){
+        alert("Please enter your child's name.");
+        return;
+    }
+
+    if(!phoneRegex.test(phone)){
+        alert("Please enter a valid phone number.");
+        return;
+    }
+
+    if(!emailRegex.test(email)){
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    const subject =
+        "Tour Request - Children's Place Learning Center";
+
+    const body =
+`Parent Name: ${parentName}
+
+Child Name: ${childName}
+
+Phone Number: ${phone}
+
+Email Address: ${email}
+
+Best Time To Contact: ${contactTime}`;
+
+    // window.open(
+    //     `mailto:cpl@cpl.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+    //     "_blank"
+    // );
+
+    // alert(
+    //     "Your email application should now open. After sending the email, click OK to continue."
+    // );
+
+    // window.location.href = "thankyou.html";
+}
+
+
+//     window.location.href =
+//         `mailto:cpl@cpl.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+// }
+
+
+</script>
+
+</body>
+
+</html>
+
