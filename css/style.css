@@ -26,7 +26,12 @@ body{
     font-family:'Nunito',sans-serif;
     color:var(--dark);
     line-height:1.6;
-    background:#fff;
+    background:
+        linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.92)),
+        url("../images/abc.png") top 130px right 35px / 140px auto no-repeat,
+        url("../images/hand.png") bottom center / min(1100px,90vw) auto no-repeat,
+        linear-gradient(135deg,#fffdf4 0%,#eaf8ee 50%,#fff9e6 100%);
+    background-attachment:fixed,fixed,fixed,scroll;
 }
 
 /* =========================
@@ -155,6 +160,10 @@ nav{
 }
 
 .nav-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:135px;
     text-decoration:none;
     padding:8px 16px;
     border-radius:25px;
@@ -186,6 +195,10 @@ nav{
     background:var(--blue);
 }
 
+.pricing-btn{
+    background:#7B61FF;
+}
+
 .tour-btn{
     background:#FF6B35;
 }
@@ -199,7 +212,7 @@ nav{
     padding:5px 20px 15px;
 } */
 .hero{
-    background:#EAF8EE;
+    background:rgba(234,248,238,.88);
     padding:10px 20px 10px 20px;
 }
 .banner{
@@ -271,7 +284,7 @@ nav{
 ========================= */
 
 #programs{
-    background:var(--light-yellow);
+    background:rgba(255,249,230,.86);
 }
 
 .program-grid{
@@ -281,7 +294,7 @@ nav{
 }
 
 .program-card{
-    background:white;
+    background:rgba(255,255,255,.94);
     padding:30px;
     border-radius:15px;
     text-align:center;
@@ -297,6 +310,95 @@ nav{
 .program-card h3{
     color:var(--red);
     margin-bottom:10px;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-hero{
+    background:rgba(234,248,238,.88);
+    text-align:center;
+    padding:60px 20px 45px;
+}
+
+.pricing-hero h1{
+    color:var(--blue);
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.pricing-hero p{
+    max-width:760px;
+    margin:0 auto;
+    font-size:21px;
+}
+
+.pricing-section{
+    background:rgba(255,249,230,.86);
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.pricing-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:rgba(255,255,255,.94);
+    padding:30px 24px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.pricing-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.pricing-card h3{
+    color:var(--red);
+    margin-bottom:12px;
+}
+
+.pricing-card .price{
+    color:var(--green);
+    font-family:'Fredoka',sans-serif;
+    font-size:42px;
+    font-weight:600;
+    line-height:1;
+    margin-bottom:22px;
+}
+
+.pricing-card .price span{
+    font-size:24px;
+    vertical-align:super;
+}
+
+.pricing-card .price small{
+    color:var(--dark);
+    font-family:'Nunito',sans-serif;
+    font-size:16px;
+    font-weight:700;
+}
+
+.pricing-card ul{
+    flex:1;
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.pricing-card li{
+    margin-bottom:10px;
+}
+
+.featured-pricing{
+    border:3px solid var(--yellow);
 }
 
 /* =========================
@@ -327,7 +429,7 @@ nav{
 ========================= */
 
 .features{
-    background:var(--light-green);
+    background:rgba(234,248,238,.86);
 }
 
 .feature-grid{
@@ -337,7 +439,7 @@ nav{
 }
 
 .feature-card{
-    background:white;
+    background:rgba(255,255,255,.94);
     padding:25px;
     border-radius:15px;
     text-align:center;
@@ -359,11 +461,11 @@ nav{
 ========================= */
 
 .testimonials{
-    background:white;
+    background:rgba(255,255,255,.86);
 }
 
 .testimonial{
-    background:#f7f7f7;
+    background:rgba(247,247,247,.94);
     padding:25px;
     margin:20px auto;
     max-width:800px;
@@ -376,7 +478,7 @@ nav{
 ========================= */
 
 #contact{
-    background:var(--light-green);
+    background:rgba(234,248,238,.88);
     text-align:center;
 }
 
@@ -454,7 +556,7 @@ footer{
 ========================== */
 
 .tour-form-section{
-    background:#EAF8EE;
+    background:rgba(234,248,238,.88);
     padding:50px 20px;
 }
 
@@ -464,7 +566,7 @@ footer{
 
     margin:0 auto;
 
-    background:white;
+    background:rgba(255,255,255,.94);
 
     padding:40px;
 
